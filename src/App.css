@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background: rgb(204, 204, 204);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 6rem;
   color: white;
+  background: rgb(49, 49, 49);
+  width: 100%;
+  margin-bottom: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  font-size: 3rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 42rem;
+  background: rgb(238, 238, 238);
+  border-radius: 0.5rem;
+  box-shadow: 0rem 0rem 0.5rem 0.05rem rgb(131, 131, 131);
+}
+
+.education,
+.general,
+.experience {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  width: 100%;
+  height: 100%;
+}
+
+.educationForm,
+.experienceForm,
+.general > form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  width: 95%;
+}
+
+input {
+  height: 1.5rem;
+  margin: 0.25rem 0rem;
+  border-radius: 0.25rem;
+  border: 1px solid transparent;
+  padding: 0.1rem;
 }
