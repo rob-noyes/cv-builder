@@ -3,7 +3,7 @@ const Experience = () => {
     <section className="experience">
       <h2>Experience</h2>
       <form className="experienceForm">
-        <input placeholder="Position" />
+        <input />
         <input placeholder="Company" />
         <input placeholder="City" />
         <input placeholder="From" />

@@ -17,23 +17,27 @@ const General = ({
           value={nameValue}
           onChange={onChangeName}
           placeholder="Full Name"
+          required
         />
         <input
           value={emailValue}
           onChange={onChangeEmail}
           placeholder="Email"
           type="email"
+          required
         />
         <input
           value={numberValue}
           onChange={onChangeNumber}
           placeholder="Phone Number"
           type="tel"
+          required
         />
         <input
           value={addressValue}
           onChange={onChangeAddress}
           placeholder="Address"
+          required
         />
       </form>
     </section>
