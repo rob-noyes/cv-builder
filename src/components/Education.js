@@ -36,8 +36,6 @@ const Education = ({
         <input value={fromValue} onChange={onChangeFrom} placeholder="From" />
         <input value={toValue} onChange={onChangeTo} placeholder="To" />
       </form>
-      <button>Delete</button>
-      <button>Add</button>
     </section>
   );
 };

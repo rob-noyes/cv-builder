@@ -4,13 +4,16 @@
   font-family: 'Roboto', sans-serif;
   font-size: 1.2rem;
 }
+#root {
+  background: rgb(204, 204, 204);
+}
 
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
   background: rgb(204, 204, 204);
-  height: 100vh;
+  height: 100%;
 }
 
 .header {

@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import Header from './components/Header';
 import General from './components/General';
 import Education from './components/Education';
-// import Experience from './components/Experience';
+import Experience from './components/Experience';
+import Resume from './components/Resume';
 
 const App = () => {
   const [personalInfo, setPersonalInfo] = useState({
@@ -17,6 +18,11 @@ const App = () => {
     study: '',
     from: '',
     to: '',
+    position: '',
+    company: '',
+    companyCity: '',
+    companyFrom: '',
+    companyTo: '',
   });
 
   const [newName, setNewName] = useState('');
@@ -29,6 +35,11 @@ const App = () => {
   const [newStudy, setNewStudy] = useState('');
   const [newFrom, setNewFrom] = useState('');
   const [newTo, setNewTo] = useState('');
+  const [newPosition, setNewPosition] = useState('');
+  const [newCompany, setNewCompany] = useState('');
+  const [newCompanyCity, setNewCompanyCity] = useState('');
+  const [newCompanyFrom, setNewCompanyFrom] = useState('');
+  const [newCompanyTo, setNewCompanyTo] = useState('');
 
   const addPersonalInfo = (event) => {
     event.preventDefault();
@@ -43,6 +54,11 @@ const App = () => {
       study: newStudy,
       from: newFrom,
       to: newTo,
+      position: newPosition,
+      company: newCompany,
+      companyCity: newCompanyCity,
+      companyFrom: newCompanyFrom,
+      companyTo: newCompanyTo,
     };
     setPersonalInfo(newPersonalInfo);
     setNewName('');
@@ -55,6 +71,11 @@ const App = () => {
     setNewStudy('');
     setNewFrom('');
     setNewTo('');
+    setNewPosition('');
+    setNewCompany('');
+    setNewCompanyCity('');
+    setNewCompanyFrom('');
+    setNewCompanyTo('');
   };
 
   const handleName = (event) => {
@@ -94,6 +115,25 @@ const App = () => {
     setNewTo(event.target.value);
   };
 
+  const handleCompany = (event) => {
+    setNewCompany(event.target.value);
+  };
+
+  const handlePosition = (event) => {
+    setNewPosition(event.target.value);
+  };
+
+  const handleCompanyCity = (event) => {
+    setNewCompanyCity(event.target.value);
+  };
+
+  const handleCompanyFrom = (event) => {
+    setNewCompanyFrom(event.target.value);
+  };
+  const handleCompanyTo = (event) => {
+    setNewCompanyTo(event.target.value);
+  };
+
   return (
     <main>
       <Header />
@@ -124,11 +164,24 @@ const App = () => {
           onChangeFrom={handleFrom}
           onChangeTo={handleTo}
         />
-        {/* <Experience /> */}
+        <Experience
+          positionValue={newPosition}
+          companyValue={newCompany}
+          cityValue={newCompanyCity}
+          fromValue={newCompanyFrom}
+          toValue={newCompanyTo}
+          onSubmit={addPersonalInfo}
+          onChangePosition={handlePosition}
+          onChangeCompany={handleCompany}
+          onChangeCity={handleCompanyCity}
+          onChangeFrom={handleCompanyFrom}
+          onChangeTo={handleCompanyTo}
+        />
         <button form="submit-form" type="submit">
           Submit
         </button>
       </div>
+      <Resume details={personalInfo} />
     </main>
   );
 };
