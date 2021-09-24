@@ -10,18 +10,18 @@ const Resume = ({ details }) => {
       </div>
       <div className="educationContainer">
         <h3>{details.school}</h3>
-        <p>{details.city}</p>
-        <p>{details.degree}</p>
-        <p>{details.study}</p>
-        <p>{details.from}</p>
-        <p>{details.to}</p>
+        <p>City: {details.city}</p>
+        <p>Degree: {details.degree}</p>
+        <p>Field Of Study: {details.study}</p>
+        <p>From: {details.from}</p>
+        <p>To: {details.to}</p>
       </div>
       <div className="experienceContainer">
         <h3>{details.position}</h3>
         <p>{details.company}</p>
-        <p>{details.companyCity}</p>
-        <p>{details.companyFrom}</p>
-        <p>{details.companyTo}</p>
+        <p>City: {details.companyCity}</p>
+        <p>From: {details.companyFrom}</p>
+        <p>To: {details.companyTo}</p>
       </div>
     </div>
   );

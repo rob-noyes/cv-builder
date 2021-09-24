@@ -8,10 +8,10 @@ import Resume from './components/Resume';
 
 const App = () => {
   const [personalInfo, setPersonalInfo] = useState({
-    fullName: 'Robby',
-    email: 'robby7630@gmail.com',
-    phoneNumber: '513-314-1687',
-    address: '6928 N Greenwich Ave',
+    fullName: '',
+    email: '',
+    phoneNumber: '',
+    address: '',
     school: '',
     city: '',
     degree: '',
@@ -177,7 +177,7 @@ const App = () => {
           onChangeFrom={handleCompanyFrom}
           onChangeTo={handleCompanyTo}
         />
-        <button form="submit-form" type="submit">
+        <button id="submit-info" form="submit-form" type="submit">
           Submit
         </button>
       </div>
