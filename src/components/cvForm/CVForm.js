@@ -2,7 +2,7 @@ import Personal from './Personal';
 
 const CVForm = ({ cv, onChangePersonal }) => {
   return (
-    <div>
+    <div className="cvForm">
       <Personal personalInfo={cv.personalInfo} onChange={onChangePersonal} />
     </div>
   );

@@ -43,6 +43,12 @@ const Personal = ({ personalInfo, onChange }) => {
         placeholder="Address"
         value={personalInfo.address}
       />
+      <textarea
+        onChange={(e) => onChange(e)}
+        name="description"
+        placeholder="Description"
+        value={personalInfo.description}
+      />
     </section>
   );
 };

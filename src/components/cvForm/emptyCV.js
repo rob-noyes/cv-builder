@@ -6,6 +6,7 @@ const emptyCV = {
     email: '',
     phoneNumber: '',
     address: '',
+    description: '',
   },
   experience: [
     {

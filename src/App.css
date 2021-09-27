@@ -26,7 +26,6 @@
   color: white;
   background: rgb(49, 49, 49);
   width: 100%;
-  margin-bottom: 2rem;
 }
 
 h1 {
@@ -36,4 +35,15 @@ h1 {
 .personalInfo {
   display: flex;
   flex-direction: column;
+}
+
+.cvForm {
+  width: 30%;
+  padding: 2rem;
+}
+
+textarea {
+  resize: none;
+  height: 3rem;
+  text-align: left;
 }
