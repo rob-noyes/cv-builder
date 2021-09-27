@@ -2,17 +2,13 @@ import './App.css';
 import React from 'react';
 import Header from './components/Header';
 import Main from './components/Main';
-import Personal from './components/cvForm/Personal';
-import Education from './components/cvForm/Education';
-import Experience from './components/cvForm/Experience';
-import Resume from './components/Resume';
 
 const App = () => {
   return (
-    <div>
+    <>
       <Header />
       <Main />
-    </div>
+    </>
   );
 };
 

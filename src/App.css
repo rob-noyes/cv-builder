@@ -63,3 +63,22 @@ Content / Resume Preview
 
 .sideBar {
 }
+
+@media screen and (min-width: 1600px) {
+  .main {
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .cvForm {
+    width: 100%;
+    background: chocolate;
+  }
+
+  #resume {
+    align-content: flex-start;
+    width: 100%;
+    background: coral;
+  }
+}

@@ -1,6 +1,3 @@
-//PersonalInfo, Experience, Education sections
-// Allow for the ability to generate a CV from forms, allow it to be downloadable
-
 import React, { useState } from 'react';
 import emptyCV from './cvForm/emptyCV';
 import CVForm from './cvForm/CVForm';
@@ -11,7 +8,7 @@ const Main = () => {
   const [cv, setCv] = useState(emptyCV);
 
   const handleChangePersonal = (event) => {
-    const { name, value, type } = event.target;
+    const { name, value } = event.target;
 
     setCv((prevState) => ({
       ...prevState,
@@ -20,6 +17,46 @@ const Main = () => {
         [name]: value,
       },
     }));
+  };
+
+  const handleChangeExperience = (event, id) => {
+    const { name, value } = event.target;
+
+    setCv((prevState) => {
+      const newExperience = prevState.experience.map((experienceItem) => {
+        if (experienceItem.id === id) {
+          return { ...experienceItem, [name]: value };
+        }
+        return experienceItem;
+      });
+      return { ...prevState, experience: [...newExperience] };
+    });
+  };
+
+  const handleAddExperience = () => {
+    setCv((prevState) => ({
+      ...prevState,
+      experience: [
+        ...prevState.experience,
+        {
+          id: uuid(),
+          position: '',
+          company: '',
+          city: '',
+          from: '',
+          to: '',
+        },
+      ],
+    }));
+  };
+
+  const handleDeleteExperience = (id) => {
+    setCv((prevState) => {
+      const newExperience = prevState.experience.filter(
+        (experienceItem) => experienceItem.id !== id
+      );
+      return { ...prevState, experience: [...newExperience] };
+    });
   };
 
   const handleChangeEducation = (event, id) => {
@@ -36,16 +73,7 @@ const Main = () => {
     });
   };
 
-  const handleDeleteEducation = (id) => {
-    setCv((prevState) => {
-      const newEducation = prevState.education.filter(
-        (educationItem) => educationItem.id !== id
-      );
-      return { ...prevState, education: [...newEducation] };
-    });
-  };
-
-  const handleAddEducation = (event, id) => {
+  const handleAddEducation = () => {
     setCv((prevState) => ({
       ...prevState,
       education: [
@@ -63,6 +91,15 @@ const Main = () => {
     }));
   };
 
+  const handleDeleteEducation = (id) => {
+    setCv((prevState) => {
+      const newEducation = prevState.education.filter(
+        (educationItem) => educationItem.id !== id
+      );
+      return { ...prevState, education: [...newEducation] };
+    });
+  };
+
   return (
     <div className="main">
       <CVForm
@@ -71,8 +108,11 @@ const Main = () => {
         onChangeEducation={handleChangeEducation}
         onAddEducation={handleAddEducation}
         onDeleteEducation={handleDeleteEducation}
+        onChangeExperience={handleChangeExperience}
+        onAddExperience={handleAddExperience}
+        onDeleteExperience={handleDeleteExperience}
       />
-      <Content cv={cv.personalInfo} />
+      <Content cv={cv} />
     </div>
   );
 };

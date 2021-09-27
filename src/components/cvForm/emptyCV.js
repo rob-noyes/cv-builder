@@ -1,3 +1,5 @@
+import uuid from 'react-uuid';
+
 const emptyCV = {
   personalInfo: {
     firstName: '',
@@ -10,7 +12,7 @@ const emptyCV = {
   },
   experience: [
     {
-      id: 0,
+      id: uuid(),
       position: '',
       company: '',
       city: '',
@@ -20,7 +22,7 @@ const emptyCV = {
   ],
   education: [
     {
-      id: 0,
+      id: uuid(),
       university: '',
       city: '',
       degree: '',

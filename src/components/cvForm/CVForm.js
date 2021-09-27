@@ -1,5 +1,6 @@
 import Personal from './Personal';
 import Education from './Education';
+import Experience from './Experience';
 
 const CVForm = ({
   cv,
@@ -7,15 +8,24 @@ const CVForm = ({
   onChangeEducation,
   onAddEducation,
   onDeleteEducation,
+  onChangeExperience,
+  onAddExperience,
+  onDeleteExperience,
 }) => {
   return (
     <div className="cvForm">
       <Personal personalInfo={cv.personalInfo} onChange={onChangePersonal} />
       <Education
-        educationInfo={cv.education}
+        education={cv.education}
         onChange={onChangeEducation}
         onAdd={onAddEducation}
         onDelete={onDeleteEducation}
+      />
+      <Experience
+        experienceInfo={cv.experience}
+        onChange={onChangeExperience}
+        onAdd={onAddExperience}
+        onDelete={onDeleteExperience}
       />
     </div>
   );

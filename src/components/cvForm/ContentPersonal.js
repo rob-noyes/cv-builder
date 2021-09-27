@@ -1,18 +1,18 @@
-const ContentPersonal = ({ cv }) => {
+const ContentPersonal = ({ personal, education }) => {
   return (
     <section className="sideBar">
       <h2>
-        {cv.firstName} {cv.lastName}
+        {personal.firstName} {personal.lastName}
       </h2>
       <div>
-        <h3>{cv.title}</h3>
-        <p>{cv.description}</p>
+        <h3>{personal.title}</h3>
+        <p>{personal.description}</p>
       </div>
       <div id="contact">
         <h4>Contact</h4>
-        <p>{cv.phoneNumber}</p>
-        <p>{cv.email}</p>
-        <p>{cv.address}</p>
+        <p>{personal.phoneNumber}</p>
+        <p>{personal.email}</p>
+        <p>{personal.address}</p>
       </div>
     </section>
   );
