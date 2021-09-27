@@ -1,9 +1,9 @@
 import './App.css';
-import React, { useState } from 'react';
+import React from 'react';
 import Header from './components/Header';
 import Main from './components/Main';
 import Personal from './components/cvForm/Personal';
-import Education from './components/Education';
+import Education from './components/cvForm/Education';
 import Experience from './components/cvForm/Experience';
 import Resume from './components/Resume';
 

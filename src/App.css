@@ -47,3 +47,19 @@ textarea {
   height: 3rem;
   text-align: left;
 }
+
+/* ********************
+
+Content / Resume Preview
+
+********************** */
+
+#resume {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.sideBar {
+}
