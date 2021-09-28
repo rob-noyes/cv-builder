@@ -59,6 +59,7 @@ button {
   margin: 0.2rem 0;
   height: 2rem;
   border-radius: 0.25rem;
+  cursor: pointer;
 }
 
 /* ********************
@@ -100,11 +101,22 @@ textarea {
   height: 4rem;
 }
 
+.exampleReset button {
+  width: 100%;
+}
+#example {
+  background: rgba(20, 135, 189, 0.87);
+}
+
+#reset {
+  background: rgba(189, 20, 20, 0.87);
+}
+
 #sidebar {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 60%;
+  width: 100%;
   padding: 2rem;
   background: rgb(238, 174, 202);
   background: linear-gradient(

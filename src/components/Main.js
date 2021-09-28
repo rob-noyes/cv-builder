@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import emptyCV from './cvForm/emptyCV';
 import CVForm from './cvForm/CVForm';
 import Content from './cvForm/Content/Content';
+import exampleCV from './cvForm/exampleCV';
 import uuid from 'react-uuid';
 
 const Main = () => {
@@ -101,6 +102,14 @@ const Main = () => {
     });
   };
 
+  const handleExampleCV = () => {
+    setCv(exampleCV);
+  };
+
+  const handleResetCV = () => {
+    setCv(emptyCV);
+  };
+
   return (
     <div className="main">
       <CVForm
@@ -112,6 +121,8 @@ const Main = () => {
         onChangeExperience={handleChangeExperience}
         onAddExperience={handleAddExperience}
         onDeleteExperience={handleDeleteExperience}
+        onExampleCV={handleExampleCV}
+        onResetCV={handleResetCV}
       />
       <Content cv={cv} />
     </div>

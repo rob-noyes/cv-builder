@@ -1,6 +1,7 @@
 import Personal from './Personal';
 import Education from './Education';
 import Experience from './Experience';
+import Button from './Button';
 
 const CVForm = ({
   cv,
@@ -11,6 +12,8 @@ const CVForm = ({
   onChangeExperience,
   onAddExperience,
   onDeleteExperience,
+  onExampleCV,
+  onResetCV,
 }) => {
   return (
     <div className="cvForm">
@@ -27,6 +30,7 @@ const CVForm = ({
         onAdd={onAddExperience}
         onDelete={onDeleteExperience}
       />
+      <Button onExample={onExampleCV} onReset={onResetCV} />
     </div>
   );
 };
