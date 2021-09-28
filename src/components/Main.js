@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import emptyCV from './cvForm/emptyCV';
 import CVForm from './cvForm/CVForm';
-import Content from './cvForm/Content';
+import Content from './cvForm/Content/Content';
 import uuid from 'react-uuid';
 
 const Main = () => {
@@ -43,6 +43,7 @@ const Main = () => {
           position: '',
           company: '',
           city: '',
+          details: '',
           from: '',
           to: '',
         },

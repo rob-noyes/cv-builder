@@ -2,7 +2,7 @@
 
 * {
   font-family: 'Roboto', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 #root {
   background: rgb(204, 204, 204);
@@ -38,14 +38,27 @@ h1 {
 }
 
 .cvForm {
-  width: 30%;
+  width: 50%;
   padding: 2rem;
+  margin-top: 2rem;
+  background: rgb(231, 231, 231);
+  border-radius: 0.5rem;
+  box-shadow: 0px 5px 20px 2px rgb(145, 145, 145);
 }
 
-textarea {
+.personalInfo > textarea {
   resize: none;
   height: 3rem;
   text-align: left;
+}
+
+button {
+  background: rgb(49, 49, 49);
+  color: white;
+  border: none;
+  margin: 0.2rem 0;
+  height: 2rem;
+  border-radius: 0.25rem;
 }
 
 /* ********************
@@ -57,28 +70,115 @@ Content / Resume Preview
 #resume {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  width: 100%;
+  width: 900px;
+  height: 1200px;
+  background: rgb(255, 255, 255);
+  box-shadow: 0px 5px 20px 2px rgb(145, 145, 145);
+  margin: 2rem;
 }
 
-.sideBar {
+#resume p {
+  font-size: 1rem;
+}
+
+.experience,
+.education {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+
+input,
+textarea {
+  margin: 0.25rem 0;
+  border-radius: 0.25rem;
+  border: none;
+}
+
+.experience > textarea {
+  resize: none;
+  height: 4rem;
+}
+
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 2rem;
+  background: rgb(238, 174, 202);
+  background: linear-gradient(
+    180deg,
+    rgba(238, 174, 202, 0.7) 0%,
+    rgba(148, 187, 233, 0.7) 100%
+  );
+}
+
+#details p,
+h3,
+h4 {
+  font-size: 1rem;
+}
+
+#sidebar > h2 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.educationContainer p,
+.educationContainer span,
+#contact p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+#mainbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2rem;
+}
+
+#experienceList {
+  margin-top: 3rem;
+}
+
+.companyDetails {
+  display: flex;
+  align-items: center;
+}
+
+.companyDetails h3 {
+  font-size: 1.1rem;
+}
+
+.companyDetails > p {
+  padding-left: 1rem;
+  font-size: 1rem;
+}
+
+.companyTimeline {
+  display: flex;
+  flex-direction: row;
+}
+.companyTimeline > p {
+  padding-right: 1rem;
+  margin: 0;
 }
 
 @media screen and (min-width: 1600px) {
   .main {
     flex-direction: row;
-    justify-content: center;
-    align-content: center;
+    align-items: unset;
   }
-
-  .cvForm {
-    width: 100%;
-    background: chocolate;
-  }
-
   #resume {
-    align-content: flex-start;
-    width: 100%;
-    background: coral;
+    width: 1200px;
+    margin-right: 5rem;
+    position: sticky;
+  }
+  .cvForm {
+    margin: 2rem 0rem 5rem 5rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
   }
 }

@@ -1,6 +1,7 @@
 const EducationItem = ({ id, education, onChange, onDelete }) => {
   return (
     <>
+      <h3>Education</h3>
       <input
         onChange={(e) => onChange(e, id)}
         type="text"
@@ -38,7 +39,7 @@ const EducationItem = ({ id, education, onChange, onDelete }) => {
       />
       <input
         onChange={(e) => onChange(e, id)}
-        type="number"
+        type="text"
         name="to"
         placeholder="To"
         value={education.to}

@@ -1,6 +1,7 @@
 const Personal = ({ personalInfo, onChange }) => {
   return (
     <section title="Personal Info" className="personalInfo">
+      <h3>Personal Information</h3>
       <input
         onChange={(e) => onChange(e)}
         type="text"

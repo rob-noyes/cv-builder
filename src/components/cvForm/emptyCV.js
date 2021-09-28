@@ -16,6 +16,7 @@ const emptyCV = {
       position: '',
       company: '',
       city: '',
+      details: '',
       from: '',
       to: '',
     },

@@ -1,10 +1,10 @@
 const ContentPersonal = ({ personal, education }) => {
   return (
-    <section className="sideBar">
+    <>
       <h2>
         {personal.firstName} {personal.lastName}
       </h2>
-      <div>
+      <div id="details">
         <h3>{personal.title}</h3>
         <p>{personal.description}</p>
       </div>
@@ -14,7 +14,7 @@ const ContentPersonal = ({ personal, education }) => {
         <p>{personal.email}</p>
         <p>{personal.address}</p>
       </div>
-    </section>
+    </>
   );
 };
 

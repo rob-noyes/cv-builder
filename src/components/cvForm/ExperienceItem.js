@@ -1,13 +1,7 @@
 const ExperienceItem = ({ id, experience, onChange, onDelete }) => {
   return (
-    <section className="experience">
-      <input
-        onChange={(e) => onChange(e, id)}
-        type="text"
-        name="position"
-        placeholder="Position"
-        value={experience.position}
-      />
+    <>
+      <h3>Experience</h3>
       <input
         onChange={(e) => onChange(e, id)}
         type="text"
@@ -18,9 +12,23 @@ const ExperienceItem = ({ id, experience, onChange, onDelete }) => {
       <input
         onChange={(e) => onChange(e, id)}
         type="text"
+        name="position"
+        placeholder="Position"
+        value={experience.position}
+      />
+      <input
+        onChange={(e) => onChange(e, id)}
+        type="text"
         name="city"
         placeholder="City"
         value={experience.city}
+      />
+      <textarea
+        onChange={(e) => onChange(e, id)}
+        type="text"
+        name="details"
+        placeholder="Details"
+        value={experience.details}
       />
       <input
         onChange={(e) => onChange(e, id)}
@@ -39,7 +47,7 @@ const ExperienceItem = ({ id, experience, onChange, onDelete }) => {
       <button text="Delete" onClick={() => onDelete(id)}>
         Delete
       </button>
-    </section>
+    </>
   );
 };
 

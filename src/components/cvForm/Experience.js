@@ -13,7 +13,7 @@ const Experience = ({ experienceInfo, onChange, onAdd, onDelete }) => {
     );
   });
   return (
-    <div>
+    <div className="experience">
       {experienceItem}
       <button title="Add" onClick={onAdd}>
         Add
