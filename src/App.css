@@ -104,7 +104,7 @@ textarea {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 100%;
+  width: 60%;
   padding: 2rem;
   background: rgb(238, 174, 202);
   background: linear-gradient(
@@ -134,6 +134,7 @@ h4 {
 
 #mainbar {
   display: flex;
+  min-width: 60%;
   flex-direction: column;
   justify-content: flex-start;
   padding: 2rem;
