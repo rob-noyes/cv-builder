@@ -71,8 +71,9 @@ Content / Resume Preview
 #resume {
   display: flex;
   flex-direction: row;
-  width: 900px;
-  height: 1200px;
+  width: 100%;
+  max-width: 900px;
+  min-height: 1200px;
   background: rgb(255, 255, 255);
   box-shadow: 0px 5px 20px 2px rgb(145, 145, 145);
   margin: 2rem;
@@ -116,7 +117,7 @@ textarea {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 100%;
+  width: 60%;
   padding: 2rem;
   background: rgb(238, 174, 202);
   background: linear-gradient(
@@ -146,7 +147,7 @@ h4 {
 
 #mainbar {
   display: flex;
-  min-width: 60%;
+  width: 100%;
   flex-direction: column;
   justify-content: flex-start;
   padding: 2rem;
